@@ -5,8 +5,54 @@
         <div class="wrapper">
                 <h1>FOOD</h1>
 
-                <div class="clearfix"></div>
+                <br /><br />
 
+                        <!-- BUTTON TO ADD ADMIN -->
+                        <a href="#" class="btn-primary">Add Food</a>
+
+                        <br /><br /><br />
+
+
+
+                        <table class="tbl-full">
+                                <tr>
+                                        <th>S.N.</th>
+                                        <th>Full Name</th>
+                                        <th>UserName</th>
+                                        <th>Action</th>
+                                </tr>
+
+                                <tr>
+                                        <td>1. </td>
+                                        <td>THE ANH </td>
+                                        <td>food </td>
+                                        <td>
+                                                <a href="#" class="btn-secondary">Update Admin</a>
+                                                <a href="#" class="btn-third">Delete Admin</a>
+                                        </td>
+                                </tr>
+
+                                <tr>
+                                        <td>2. </td>
+                                        <td>THE ANH </td>
+                                        <td>food </td>
+                                        <td>
+                                                <a href="#" class="btn-secondary">Update Admin</a>
+                                                <a href="#" class="btn-third">Delete Admin</a>
+                                        </td>
+                                </tr>
+
+                                <tr>
+                                        <td>3. </td>
+                                        <td>THE ANH </td>
+                                        <td>food </td>
+                                        <td>
+                                                <a href="#" class="btn-secondary">Update Admin</a>
+                                                <a href="#" class="btn-third">Delete Admin</a>
+                                        </td>
+                                </tr>
+                                
+                        </table>
 
             </div>
         </div>

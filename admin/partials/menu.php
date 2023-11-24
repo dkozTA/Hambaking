@@ -1,3 +1,5 @@
+<?php include("/xampp/htdocs/Hambaking/config/constants.php") ?>
+
 <html>
     <head>
         <title>Admin</title>

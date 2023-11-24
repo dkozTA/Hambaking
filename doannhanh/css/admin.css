@@ -26,6 +26,20 @@
 }
 
 
+.tbl-full{
+    width: 100%;
+}
+
+table tr th{
+    border-bottom: 1px solid black;
+    padding: 1%;
+    text-align: left;
+}
+
+table tr td{
+    padding: 1%;
+}
+
 
 
 /*
@@ -54,9 +68,10 @@
 /* css for main-content */
 .main-content{
     background-color: gray;
+    padding: 3% 0;
 }
 .col-4{
-    width: 20%;
+    width: 18%;
     background-color: white;
     margin: 1%;
     padding: 2%;

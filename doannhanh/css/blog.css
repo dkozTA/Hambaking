@@ -1,0 +1,41 @@
+.blog-container{
+    padding-top: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.blog-content{
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    
+}
+
+.blog-content .title{
+    margin-top: 20px;
+    color: #e4c7a4;
+    font-size: 40px;
+
+}
+
+.blog-content h3, span{
+    margin-bottom: 10px;
+    color:  darkgray;
+}
+
+.blog-content p{
+    margin-top: 10px;
+    color: gray;
+}
+
+@media (min-width: 790px) {
+    .blog-container{
+        padding-top: 40px;
+        
+    }
+
+    .blog-container img{
+        width: 80%;
+        height: 500px;
+    }
+}

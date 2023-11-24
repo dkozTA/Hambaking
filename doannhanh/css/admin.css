@@ -1,0 +1,73 @@
+/*
+    Admin css;
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    padding: 1%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+
+
+
+/*
+    css for Menu
+*/
+.menu{
+    border-bottom: 1px solid;
+}
+.menu ul{
+    list-style-type: none;
+}
+.menu ul li{
+    display: inline;
+    padding: 1%;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(84, 67, 43);
+}
+.menu ul li :hover{
+    color:  rgb(117, 95, 95);
+}
+
+
+/* css for main-content */
+.main-content{
+    background-color: gray;
+}
+.col-4{
+    width: 20%;
+    background-color: white;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+}
+
+
+/* 
+    footer css
+ */
+.footer{
+    background-color: rgb(71, 71, 55);
+    color: white;
+}

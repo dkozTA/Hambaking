@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500&display=swap');
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f9f9f9;
+    font-family: "Roboto", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Header */
+.header{
+    background-color: #36383F;
+    background: transparent;
+    box-shadow: 1px 1px 5px 0px #85888C;
+    top: 0;
+    width: 100%;
+}
+
+/* Logo */
+.logo{
+    display: inline-block;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    color: #f9f9f9;
+    font-size: 50px;
+    padding: 10px 0;
+    margin-left: 20px;
+
+}
+
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #36383F;
+    overflow: hidden;
+    
+}
+
+.menu a{
+    display: block;
+    font-size: 20px;
+    padding: 25px 10px;
+    color: #f9f9f9;
+
+}
+
+.menu a:hover{
+    background-color: #85888C;
+}
+
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+
+.hamburger{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+
+.hamburger-line {
+    background: #f9f9f9;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+    
+}
+
+.hamburger-line::before,
+.hamburger-line::after{
+    background: #f9f9f9;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamburger-line::before{
+    top: 5px;
+}
+
+.hamburger-line::after{
+    top: -5px;
+}
+
+
+.side-menu {
+    display: none;
+}
+
+/* Toggle menu icon */
+
+.side-menu:checked ~ nav{
+    max-height: 100%;
+    z-index: 1;
+}
+
+.side-menu:checked ~ .hamburger .hamburger-line {
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamburger .hamburger-line::before {
+    transform: rotate(-45deg);
+    top:0;
+
+}
+
+.side-menu:checked ~ .hamburger .hamburger-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+main{
+    background: url(../images/bg-img.jpeg);
+    height: 100%;
+    background-size: cover;
+
+}
+
+/* Landing Section */
+
+.landing {
+    padding: 0 20px;
+    height: 80vh;
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+
+.landing h3 span{
+    font-weight: bolder;
+    font-size: 50px;
+    color: #e4c7a4;
+}
+
+.landing h3{
+    font-size: 50px;
+    font-weight: normal;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.landing p{
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 0.3px;
+}
+
+.btn{
+    margin-top: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #e4c7a4;
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #c8ae8e;
+}
+
+/* Footer */
+
+footer{
+    padding: 40px 20px;
+    background-color: #36383F;
+}
+
+footer div{
+    margin-bottom: 25px;
+}
+
+footer div p{
+    font-size: 18px;
+    color: white;
+}
+
+footer div span{
+    font-size: 16px;
+    color: white;
+}
+
+footer div ul li{
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+footer div ul li a{
+    font-size: 17px;
+    color: #e4c7a4;
+}
+
+footer .social{
+    margin-top: 20px;
+}
+
+
+footer .social img{
+    width: 30px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+footer .social img:hover{
+    opacity: 0.7;
+}
+
+
+
+/* Responsiveness */
+
+@media (min-width: 790px) {
+    .header{
+        padding: 0 40px;
+    }
+
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+
+    .menu li{
+        float: left;
+    }
+
+    .menu a:hover{
+        background-color: transparent;
+        color: #cacccf;
+        
+    }
+    
+    .hamburger{
+        display: none;
+    }
+
+    /* Landing */
+
+    .landing{
+        padding: 0 50px;
+    }
+    
+    .landing h3 span{
+        font-size: 75px;
+    }
+    
+    .landing h3{
+        font-size: 75px;
+        letter-spacing: 1.25px;
+    }
+    
+    .landing p{
+        font-size: 35px;
+        letter-spacing: 0.4px;
+    }
+    
+    .btn{
+        font-size: 18px;
+        padding: 18px 35px;
+        border-radius: 35px;
+    }
+
+
+    /* footer */
+
+    footer .container{
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+}

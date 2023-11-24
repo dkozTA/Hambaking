@@ -4,8 +4,11 @@ USE fastfood;
 
 -- Tao bang cac hang muc
 CREATE TABLE Categories (
-    CategoryID INT AUTO_INCREMENT PRIMARY KEY,
-    Name VARCHAR(255) NOT NULL
+    CategoryID INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    Featured VARCHAR(10) NOT NULL,
+    actve VARCHAR(10) NOT NULL,
+    image_name VARCHAR(255)
 );
 
 -- them vao ca hang muc do an
@@ -19,11 +22,12 @@ INSERT INTO Categories (Name) VALUES
 
 -- Tao bang Menu cu the
 CREATE TABLE MenuDetail (
-    ItemID INT AUTO_INCREMENT PRIMARY KEY,
+    FoodID INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Name VARCHAR(255) NOT NULL,
     Description TEXT,
     Price DECIMAL(10, 2) NOT NULL,
-    CategoryID INT,
+    CategoryID INT UNSIGNED,
+    image_name VARCHAR(255),
     FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
 );
 
@@ -36,9 +40,18 @@ INSERT INTO MenuDetail (Name, Description, Price, CategoryID) VALUES
     ('Soda', 'Refreshing soda in various flavors.', 1.99, 5);
 
 
+-- tao bang admin
+CREATE TABLE admin (
+    id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    username VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL
+);
+
+
 -- Tao bang khach hang
 CREATE TABLE Customers (
-    CustomerID INT AUTO_INCREMENT PRIMARY KEY,
+    CustomerID INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Name VARCHAR(255) NOT NULL,
     Email VARCHAR(255) UNIQUE NOT NULL,
     Phone VARCHAR(20),
@@ -47,49 +60,28 @@ CREATE TABLE Customers (
 
 -- Tao bang don hang
 CREATE TABLE Orders (
-    OrderID INT AUTO_INCREMENT PRIMARY KEY,
-    CustomerID INT,
+    OrderID INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    CustomerID INT UNSIGNED,
     CustomerName VARCHAR(255) NOT NULL,
     OrderDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    TotalCost DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
 );
 
 -- Tao bang don hang cu the
 CREATE TABLE OrderDetail (
-    OrderItemID INT AUTO_INCREMENT PRIMARY KEY,
-    OrderID INT,
-    ItemID INT,
+    OrderFoodID INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    OrderID INT UNSIGNED,
+    FoodID INT UNSIGNED,
     Quantity INT NOT NULL,
-    Customization TEXT,
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
-    FOREIGN KEY (ItemID) REFERENCES MenuDetail(ItemID)
+    FOREIGN KEY (FoodID) REFERENCES MenuDetail(FoodID)
 );
 
 -- Tao bang thanh toan
 CREATE TABLE Payments (
-    PaymentID INT AUTO_INCREMENT PRIMARY KEY,
-    OrderID INT,
+    PaymentNumber INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    CustomerID INT UNSIGNED,
     PaymentDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PaymentMethod VARCHAR(50),
-    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
 );
-
-
-
-
-
--- May cai nay chay sau, chay may cai tren trc
-SELECT * FROM categories;
-SELECT * FROM menudetail;
-SELECT * FROM customers;
-SELECT * FROM orders;
-SELECT * FROM orderDetail;
-SELECT * FROM payments;
-
-DESCRIBE categories;
-DESCRIBE customers;
-DESCRIBE menudetail;
-DESCRIBE orders;
-DESCRIBE orderDetail;
-DESCRIBE payments;

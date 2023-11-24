@@ -1,0 +1,42 @@
+.services{
+    background-color: grey;
+    text-align: center;
+    padding: 20px;
+    color: white;
+
+}
+
+.services-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.services .box{
+    background-color: white;
+    border-radius: 10px;
+    text-align: left;
+    width: 300px;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+}
+
+
+
+.services p{
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.services .box h2{
+    color: #e4c7a4;
+    margin-bottom: 20px;
+}
+
+.services .box h3 a{
+    color: black;
+}
+
+.services .box h3 a:hover{
+    opacity: 0.7;
+}

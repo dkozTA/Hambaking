@@ -13,6 +13,34 @@
                                         echo $_SESSION['add'];
                                         unset($_SESSION['add']);
                                 }
+
+                                if(isset($_SESSION['delete'])) {
+                                        echo $_SESSION['delete'];
+                                        unset($_SESSION['delete']);
+                                }
+
+                                if (isset($_SESSION['update'])) {
+                                        echo $_SESSION['update'];
+                                        unset($_SESSION['update']);
+                                }
+
+
+                                if (isset($_SESSION['user-not-found'])) {
+                                        echo $_SESSION['user-not-found'];
+                                        unset($_SESSION['user-not-found']);
+                                }
+
+                                if (isset($_SESSION['pass-not-found'])) {
+                                        echo $_SESSION['pass-not-found'];
+                                        unset($_SESSION['pass-not-found']);
+                                }
+
+
+                                if (isset($_SESSION['change-pass'])) {
+                                        echo $_SESSION['change-pass'];
+                                        unset($_SESSION['change-pass']);
+                                }
+
                         ?>
                         <br><br><br>
 
@@ -39,25 +67,28 @@
                                         {
                                                 $count = mysqli_num_rows($res); //get row in database
 
+                                                $sn = 1;
+
                                                 //check number of rows
                                                 if($count > 0) {
-                                                        while($rows = mysqli_fetch_assoc($res)) {
+                                                        while($rows = mysqli_fetch_assoc($res)) { 
 
                                                                 //get data
                                                                 $id = $rows['id'];
                                                                 $full_name = $rows['full_name'];
                                                                 $username = $rows['username'];
 
-                                                                //display the vaules in the table\
+                                                                //display the vaules in the table
                                                                 ?>
 
                                                                         <tr>
-                                                                                <td><?php echo $id ?> </td>
+                                                                                <td><?php echo $sn++ ?> </td>
                                                                                 <td><?php echo $full_name ?> </td>
                                                                                 <td><?php echo $username ?> </td>
                                                                                 <td>
-                                                                                        <a href="#" class="btn-secondary">Update Admin</a>
-                                                                                        <a href="#" class="btn-third">Delete Admin</a>
+                                                                                        <a href="<?php echo HOMEURL; ?>admin/update-password.php?id=<?php echo $id; ?>" class="btn-primary">Change password</a>
+                                                                                        <a href="<?php echo HOMEURL; ?>admin/update-admin.php?id=<?php echo $id; ?>" class="btn-secondary">Update Admin</a>
+                                                                                        <a href="<?php echo HOMEURL; ?>admin/delete-admin.php?id=<?php echo $id; ?>" class="btn-third">Delete Admin</a>
                                                                                 </td>
                                                                         </tr>
 

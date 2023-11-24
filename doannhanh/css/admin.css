@@ -46,39 +46,51 @@ table tr td{
 
 
 .btn-primary{
-    background-color: rgb(44, 37, 37);
+    background-color: #303952;
     padding: 1%;
-    color: wheat;
+    color: #f5cd79;
     text-decoration: none;
     font-weight: bold;
 }
 .btn-primary:hover{
-    background-color: rgb(209, 27, 27);
+    background-color: #596275;
 }
 
 
 .btn-secondary{
-    background-color: rgb(44, 71, 74);
+    background-color: #c44569;
     padding: 1%;
-    color: rgb(168, 147, 108);
+    color: #f5cd79;
     text-decoration: none;
     font-weight: bold;
 }
 .btn-secondary:hover{
-    background-color: rgb(179, 70, 70);
+    background-color: #778beb;
 }
 
 
 .btn-third{
-    background-color: rgb(176, 184, 185);
+    background-color: #786fa6;
     padding: 1%;
-    color: rgb(75, 30, 159);
+    color: #303952;
     text-decoration: none;
     font-weight: bold;
 }
 .btn-third:hover{
-    background-color: rgb(146, 109, 109);
+    background-color: #f3a683;
 }
+
+
+.success{
+    color: #4d3f39;
+}
+.error{
+    color: #596275;
+}
+
+
+
+
 
 
 
@@ -107,12 +119,12 @@ table tr td{
 
 /* css for main-content */
 .main-content{
-    background-color: gray;
+    background-color: #63cdda;
     padding: 3% 0;
 }
 .col-4{
     width: 18%;
-    background-color: white;
+    background-color: #f19066;
     margin: 1%;
     padding: 2%;
     float: left;
@@ -123,6 +135,6 @@ table tr td{
     footer css
  */
 .footer{
-    background-color: rgb(71, 71, 55);
+    background-color: #574b90;
     color: white;
 }

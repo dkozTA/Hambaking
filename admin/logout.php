@@ -4,7 +4,7 @@
 
 
     //destroy sesssion
-    session_destroy(); //unset session['user]
+    session_destroy(); //unset session['user']
 
 
     //back to login page

@@ -60,7 +60,7 @@
                                 //dispaly image
                                 ?>
 
-                                <img src="<?php echo HOMEURL; ?>doannhanh/images/category/<?php echo $current_image; ?>" width="200px" >
+                                <img src="<?php echo HOMEURL; ?>doannhanh/images/category/<?php echo $current_image; ?>" width="500px" >
 
                                 <?php
 
@@ -166,7 +166,7 @@
                         }
                         
 
-                    } else {
+                    } else { //keep the image the same if user not change the image
                         $image_name = $current_image;
                     }
 

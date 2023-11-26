@@ -28,6 +28,8 @@ CREATE TABLE MenuDetail (
     Price DECIMAL(10, 2) NOT NULL,
     CategoryID INT UNSIGNED,
     image_name VARCHAR(255),
+    Featured VARCHAR(10),
+    active VARCHAR(10)
     FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
 );
 

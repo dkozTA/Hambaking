@@ -1,3 +1,5 @@
+<?php include('/xampp/htdocs/Hambaking/config/constants.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +14,7 @@
     <link rel="stylesheet" href="css/attorneys.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/categories.css">
     
 </head>
 <body>
@@ -29,12 +32,12 @@
         <!-- Menu -->
         <nav class="nav">
             <ul class="menu">
-                <li><a href="index.php">Trang chủ</a></li>
-                <li><a href="services.php">Thực đơn</a> </li>
-                <li><a href="attorneys.php">Sáng Lập</a></li>
-                <li><a href="blog.php">Blog</a></li>
-                <li><a href="about.php">Về HamBaking</a></li>
-                <li><a href="contact.php">Liên hệ</a></li>
+                <li><a href="<?php echo HOMEURL; ?>doannhanh/index.php">Trang chủ</a></li>
+                <li><a href="<?php echo HOMEURL; ?>doannhanh/services.php">Thực đơn</a> </li>
+                <li><a href="<?php echo HOMEURL; ?>doannhanh/attorneys.php">Sáng Lập</a></li>
+                <li><a href="<?php echo HOMEURL; ?>doannhanh/blog.php">Blog</a></li>
+                <li><a href="<?php echo HOMEURL; ?>doannhanh/about.php">Về HamBaking</a></li>
+                <li><a href="<?php echo HOMEURL; ?>doannhanh/contact.php">Liên hệ</a></li>
             </ul>
         </nav>
     </header>

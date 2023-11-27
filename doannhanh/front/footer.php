@@ -1,63 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/services.css">
-    
-</head>
-<body>
-    
-    <main>
-    <!-- Navigation bar -->
-    <header class="header">
-        <!-- Logo -->
-        <a href="index.html" class="logo">HamBaking.</a>
-
-        <!-- Hamburger icon -->
-        <input class="side-menu" type="checkbox" id="side-menu"/>
-        <label class="hamburger" for="side-menu"><span class="hamburger-line"></span></label>
-
-        <!-- Menu -->
-        <nav class="nav">
-            <ul class="menu">
-                <li><a href="index.html">Trang chủ</a></li>
-                <li><a href="services.html">Thực đơn</a> </li>
-                <li><a href="attorneys.html">Sáng Lập</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">Về HamBaking</a></li>
-                <li><a href="contact.html">Liên hệ</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-
-    <section class="landing">
-        <h3><span>Đồ ăn tốt </span>Cho trái tim bạn</h3>
-        <p>Eat what you want to eat!</p>
-        <button class="btn">Choose your food</button>
-    </section>
-
-    
-        
-    </main>
-
-
-    <footer>
+<footer>
         <div class="container">
             <div>
                 <p>HamBaking</p>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a> </li>
-                    <li><a href="attorneys.html">Foundation</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="services.php">Services</a> </li>
+                    <li><a href="attorneys.php">Foundation</a></li>
+                    <li><a href="blog.php">Blog</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
                 </ul>
             </div>
 

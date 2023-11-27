@@ -9,6 +9,9 @@
 }
 
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* This ensures the container takes at least the full height of the viewport */
     background-color: #f9f9f9;
     font-family: "Roboto", sans-serif;
 }
@@ -137,7 +140,7 @@ main{
     background: url(../images/bg-img.jpeg);
     height: 100%;
     background-size: cover;
-
+    flex: 1;
 }
 
 /* Landing Section */
@@ -191,6 +194,7 @@ main{
 footer{
     padding: 40px 20px;
     background-color: #36383F;
+    margin-top: auto;
 }
 
 footer div{

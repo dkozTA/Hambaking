@@ -1,42 +1,53 @@
-.services{
-    background-color: grey;
-    text-align: center;
-    padding: 20px;
-    color: white;
-
+.food-menu {
+    padding: 4%;
 }
-
-.services-container{
+.services-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+.text-center {
+    text-align: center;
+    font-size: 200%;
+}
+.food-menu-box {
+    width: 28%;
+    padding: 2%;
+    margin: 1%;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    float: left;
+}
+.img-curve{
+    border-radius: 15px;
+}
+.food-menu-img {
+    width: 100%;
+    float: left;
+}
+.food-menu-desc{
+    width: 70%;
+    float: left;
+    margin-left: 8%;
 }
 
-.services .box{
-    background-color: white;
-    border-radius: 10px;
-    text-align: left;
-    width: 300px;
-    padding: 30px 20px;
-    margin-bottom: 30px;
+.food-price{
+    font-size: 1.2rem;
+    margin: 2% 0;
 }
-
-
-
-.services p{
-    color: gray;
-    margin-bottom: 20px;
+.food-detail{
+    font-size: 1rem;
+    color: #747d8c;
 }
-
-.services .box h2{
-    color: #e4c7a4;
-    margin-bottom: 20px;
+.btn1{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
 }
-
-.services .box h3 a{
-    color: black;
-}
-
-.services .box h3 a:hover{
-    opacity: 0.7;
+.btn-primary{
+    background-color: #ff6b81;
+    color: white;
+    cursor: pointer;
 }

@@ -1,6 +1,5 @@
 <?php 
     include('/xampp/htdocs/Hambaking/config/constants.php');
-    include('login-check.php');
 ?>
 
 <html>

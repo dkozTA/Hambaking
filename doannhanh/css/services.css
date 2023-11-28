@@ -1,4 +1,4 @@
-.services{
+.food-menu{
     background-color: grey;
     text-align: center;
     padding: 20px;
@@ -6,7 +6,7 @@
 
 }
 
-.services-container{
+.container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

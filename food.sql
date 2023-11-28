@@ -29,7 +29,7 @@ CREATE TABLE MenuDetail (
     CategoryID INT UNSIGNED,
     image_name VARCHAR(255),
     Featured VARCHAR(10),
-    active VARCHAR(10)
+    active VARCHAR(10),
     FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
 );
 

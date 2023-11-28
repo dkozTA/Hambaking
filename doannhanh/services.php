@@ -3,7 +3,7 @@
 
 <section class="food-menu">
     <h2 class="text-center">Thực đơn của chúng tôi</h2>
-        <div class="container">
+    <div class="services-container">
             <?php 
                 //Display Foods that are Active
                 $sql = "SELECT * FROM menudetail WHERE active='Yes'";
@@ -42,7 +42,7 @@
                                     {
                                         //Image Available
                                         ?>
-                                        <img src="<?php echo HOMEURL; ?>doannhanh/images/<?php echo $image_name; ?>">
+                                        <img src="<?php echo HOMEURL; ?>doannhanh/images/food/<?php echo $image_name; ?>" width="100px" class="img-curve">
                                         <?php
                                     }
                                 ?>
@@ -51,13 +51,13 @@
 
                             <div class="food-menu-desc">
                                 <h4><?php echo $name; ?></h4>
-                                <p class="food-price">$<?php echo $price . "đ"; ?></p>
+                                <p class="food-price"><?php echo $price . "đ"; ?></p>
                                 <p class="food-detail">
                                     <?php echo $description; ?>
                                 </p>
                                 <br>
 
-                                <a href="<?php echo HOMEURL; ?>order.php?food_id=<?php echo $FoodID; ?>" class="btn btn-primary">Order Now</a>
+                                <a href="<?php echo HOMEURL; ?>order.php?food_id=<?php echo $FoodID; ?>" class="btn1 btn-primary">Order Now</a>
                             </div>
                         </div>
 

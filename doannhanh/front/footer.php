@@ -3,12 +3,12 @@
             <div>
                 <p>HamBaking</p>
                 <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="services.php">Services</a> </li>
-                    <li><a href="attorneys.php">Foundation</a></li>
-                    <li><a href="blog.php">Blog</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="<?php echo HOMEURL; ?>doannhanh/index.php">Home</a></li>
+                    <li><a href="<?php echo HOMEURL; ?>doannhanh/services.php">Services</a> </li>
+                    <li><a href="<?php echo HOMEURL; ?>doannhanh/attorneys.php">Foundation</a></li>
+                    <li><a href="<?php echo HOMEURL; ?>doannhanh/blog.php">Blog</a></li>
+                    <li><a href="<?php echo HOMEURL; ?>doannhanh/about.php">About</a></li>
+                    <li><a href="<?php echo HOMEURL; ?>doannhanh/contact.php">Contact Us</a></li>
                 </ul>
             </div>
 

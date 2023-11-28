@@ -1,0 +1,45 @@
+/* CSS for Categories */
+.categories{
+    padding: 4% 0;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.box-3{
+    width: 50%;
+    float: left;
+    margin: 2%;
+}
+
+.float-text{
+    position: absolute;
+    bottom: 50px;
+    left: 40%;
+}
+
+.other{
+    width: 260px; height: 200px;
+}
+
+.float-container{
+    position: relative;
+}
+
+.img-curve{
+    border-radius: 15px;
+}
+
+.img-responsive{
+    width: 100%;
+}
+
+.success{
+    color: green;
+}
+.error{
+    color: red;
+}

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 29, 2023 at 04:12 PM
+-- Generation Time: Nov 30, 2023 at 12:43 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -67,9 +67,9 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`CategoryID`, `Name`, `Featured`, `active`, `image_name`) VALUES
-(27, 'Food', 'No', 'No', 'Food_Category_201.jpg'),
-(28, 'BURGER', 'Yes', 'Yes', 'Food_Category_467.jpg'),
-(31, 'RICE FOOD', 'Yes', 'Yes', 'Food_Category_961.png');
+(33, 'Món gà', 'Yes', 'Yes', 'Food_Category_790.jpg'),
+(34, 'Món cơm', 'Yes', 'Yes', 'Food_Category_443.jpg'),
+(35, 'Ăn vặt', 'Yes', 'Yes', 'Food_Category_538.jpg');
 
 -- --------------------------------------------------------
 
@@ -81,8 +81,21 @@ CREATE TABLE `customers` (
   `CustomerID` int(10) UNSIGNED NOT NULL,
   `Name` varchar(255) NOT NULL,
   `Email` varchar(255) NOT NULL,
-  `Address` text DEFAULT NULL
+  `Address` text DEFAULT NULL,
+  `Contact` int(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `customers`
+--
+
+INSERT INTO `customers` (`CustomerID`, `Name`, `Email`, `Address`, `Contact`) VALUES
+(3, 'brub bruh', 'test4@gmail.com', 'Hà Nội', 999888777),
+(4, 'Quàng Thế Anh', 'testemail@gmail.com', 'Hà Nội', 2147483647),
+(6, 'Donal Trump', 'te22222222@gmail.com', 'America', 2147483647),
+(7, 'Sơn', 'Stest@gmail.com', 'Cầu Giấy, Hà Nội', 2147483647),
+(8, 'Thái', 'Thai@gmail.com', 'Hà Nội', 2147483647),
+(9, 'Family', 'friend@gmail.com', 'Quảng Ninh', 2147483647);
 
 -- --------------------------------------------------------
 
@@ -106,7 +119,10 @@ CREATE TABLE `menudetail` (
 --
 
 INSERT INTO `menudetail` (`FoodID`, `Name`, `Description`, `Price`, `CategoryID`, `image_name`, `Featured`, `active`) VALUES
-(28, 'ga nuong', 'ssssssssssssss', 55.00, 28, 'Food-Name-5430.jpg', 'Yes', 'Yes');
+(29, 'Gà nướng', 'Gà được nướng qua lửa rất ngon', 11000.00, 33, 'Food-Name-1739.jpg', 'Yes', 'Yes'),
+(30, 'Gà lắc bột', 'Gà được tẩm bột và chiên xù, sau đó được lắc phô mai', 70000.00, 33, 'Food-Name-8123.jpeg', 'Yes', 'Yes'),
+(31, 'Cơm nắm rong biển', 'Cơm nếp được cuốn trong lớp rong biển đa sắc', 25000.00, 34, 'Food-Name9516.jpeg', 'Yes', 'Yes'),
+(32, 'Kim Bắp', 'Cơm quấn trong rong biển nhân đỗ, cà rốt, trứng, thịt.', 5000.00, 34, 'Food-Name-6966.png', 'Yes', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -116,15 +132,25 @@ INSERT INTO `menudetail` (`FoodID`, `Name`, `Description`, `Price`, `CategoryID`
 
 CREATE TABLE `orders` (
   `OrderID` int(10) UNSIGNED NOT NULL,
-  `FoodID` int(10) UNSIGNED NOT NULL,
   `CustomerID` int(10) UNSIGNED DEFAULT NULL,
-  `CustomerName` varchar(255) NOT NULL,
+  `FoodID` int(11) UNSIGNED NOT NULL,
   `OrderDate` timestamp NOT NULL DEFAULT current_timestamp(),
   `quantity` int(11) NOT NULL,
   `status` varchar(10) NOT NULL,
-  `total` int(11) NOT NULL,
-  `contact` int(11) NOT NULL
+  `total` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`OrderID`, `CustomerID`, `FoodID`, `OrderDate`, `quantity`, `status`, `total`) VALUES
+(8, 3, 31, '2023-11-30 05:01:15', 3, 'Ordered', 75000),
+(9, 4, 29, '2023-11-30 05:04:10', 4, 'Ordered', 44000),
+(10, 6, 32, '2023-11-30 05:07:42', 1, 'Ordered', 5000),
+(11, 7, 29, '2023-11-30 05:09:34', 1, 'Ordered', 11000),
+(12, 8, 31, '2023-11-30 05:11:42', 3, 'Ordered', 75000),
+(13, 9, 29, '2023-11-30 05:12:55', 4, 'Ordered', 44000);
 
 -- --------------------------------------------------------
 
@@ -198,25 +224,25 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `CategoryID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `CategoryID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `CustomerID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `CustomerID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `menudetail`
 --
 ALTER TABLE `menudetail`
-  MODIFY `FoodID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `FoodID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `OrderID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `OrderID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `payments`

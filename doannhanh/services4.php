@@ -34,28 +34,39 @@
             </ul>
         </nav>
     </header>
-
-        <?php 
-            if(isset($_SESSION['error'])) {
-                echo $_SESSION['error'];
-                unset($_SESSION['error']);
-            }
-
-            if(isset($_SESSION['success'])) {
-                echo $_SESSION['success'];
-                unset($_SESSION['success']);
-            }
-        ?>
     
 
-    <section class="landing">
-        <h3><span>Đồ ăn tốt </span>Cho trái tim bạn</h3>
-        <p>Eat what you want to eat!</p>
-        <button class="btn"><a href="services.php">Chọn đồ ăn</button>
+    <section class="services">
+
+        <h1 style="font-size: 50px; color: white;">Thực đơn của chúng tôi</h1>
+        
+        <div class="services-container">
+
+            
+
+            <div class="box">
+                <img src="images/douong1.jpg" style="width: 260px; height: 200px;">
+                <h2>Trà đào</h2>
+                <p>Thức uống giải khát ó vị chua chua, ngọt ngọt, thơm mát, rất được ưa chuộng trong những ngày hè nóng bức.</p>
+                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
+            </div>
+            <div class="box">
+                <img src="images/douong2.jpg" style="width: 260px; height: 200px;">
+                <h2>Trà sữa đường đen</h2>
+                <p>Được làm từ trà đen và đường đen, thức uống này có vị ngọt thanh, béo ngậy, thơm mùi trà đen và đường đen, rất được ưa chuộng bởi mọi lứa tuổi</p>
+                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
+            </div>
+            <div class="box">
+                <img src="images/douong3.jpg" style="width: 260px; height: 200px;">
+                <h2>Chanh tuyết</h2>
+                <p>Một ly chanh tuyết mát lạnh, thơm lừng vị chanh tươi, hòa quyện với vị ngọt dịu của sữa, tan ngay trong miệng.</p>
+                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
+            
+        </div>
+        
+
     </section>
 
-    
-        
     </main>
 
 

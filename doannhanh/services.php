@@ -64,6 +64,12 @@
                 <p>Vô vàn đồ ăn hấp dẫn đang chờ đợi bạn</p>
                 <h3><a href="services3.php">Learn More →</a></h3>
             </div>
+            <div class="box">
+                <img src="images/20230315_do-uong-tot-cho-suc-khoe-1.jpg" style="width: 260px; height: 200px;">
+                <h2>Đồ uống</h2>
+                <p>Vô vàn đồ uống hấp dẫn đang chờ đợi bạn</p>
+                <h3><a href="services4.php">Learn More →</a></h3>
+            </div>
             
 
     </section>

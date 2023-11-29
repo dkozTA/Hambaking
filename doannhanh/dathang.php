@@ -19,7 +19,7 @@
     <!-- Navigation bar -->
     <header class="header">
         <!-- Logo -->
-        <a href="index.html" class="logo">HamBaking.</a>
+        <a href="index.php" class="logo">HamBaking.</a>
 
         <!-- Hamburger icon -->
         <input class="side-menu" type="checkbox" id="side-menu"/>
@@ -98,81 +98,77 @@
                             }
                         
                         ?>
-            <h2><?php echo $title; ?></h2>
-            <input type="hidden" name="food" value="<?php echo $title; ?>">
-            <p class="food-price">  <?php echo $price; ?>VND</p>
-            <input type="hidden" name="price" value="<?php echo $price; ?>">
-            <div class="order-label">Quantity</div>
-            <input type="number" name="qty" placeholder="Số lượng" value="1" required>
-
-
-            <h1>Thông tin mua hàng</h1>
             <form id="contact-form" action="#" method="post">
+                <h2><?php echo $title; ?></h2>
+                <input type="hidden" name="food" value="<?php echo $title; ?>">
+                <p class="food-price">  <?php echo $price; ?>VND</p>
+                <input type="hidden" name="price" value="<?php echo $price; ?>">
+                <div class="order-label">Quantity</div>
+                <input type="number" name="qty" placeholder="Số lượng" value="1" required>
+
+
+                <h1>Thông tin mua hàng</h1>
                 
-            <input type="text" name="full_name" placeholder="Tên người nhận" required>
-            <input type="tel" name="CustomerID" placeholder="Số điện thoại người đặt" required>
-            <input type="tel" name="contact" placeholder="Số điện thoại người nhận" required>
-            <input type="text" name="address" placeholder="địa chỉ" required>
-            <input type="submit" name="submit" value="Xác nhận" class="btn btn-primary">
+                    
+                <input type="text" name="full-name" placeholder="Tên người nhận" required>
+                <input type="tel" name="email" placeholder="Email" required>
+                <input type="tel" name="contact" placeholder="Số điện thoại người nhận" required>
+                <input type="text" name="address" placeholder="địa chỉ" required>
+                <input type="submit" name="submit" value="Xác nhận" class="btn btn-primary">
+            </form>
       
         </div>
         
         <?php 
 
                 //CHeck whether submit button is clicked or not
-                if(isset($_POST['submit']))
-                {
+                if (isset($_POST['submit'])) {
                     // Get all the details from the form
-
-                    $food = $_POST['food'];
-                    $price = $_POST['price'];
                     $qty = $_POST['qty'];
-
+                
                     $total = $price * $qty; // total = price x qty 
-
-                    $order_date = date("Y-m-d h:i:sa"); //Order DAte
-
+                
+                    $order_date = date("Y-m-d h:i:sa"); //Order Date
+                
                     $status = "Ordered";  // Ordered, On Delivery, Delivered, Cancelled
-
+                
                     $customer_name = $_POST['full-name'];
                     $customer_contact = $_POST['contact'];
-                    $customer_email = $_POST['CustomerID'];
+                    $customer_email = $_POST['email'];
                     $customer_address = $_POST['address'];
-
-
-                    //Save the Order in Databaase
-                    //Create SQL to save the data
-                    $sql2 = "INSERT INTO orders SET 
-                        food = '$food',
-                        price = $price,
-                        quantity = $qty,
-                        total = $total,
-                        OrderDate = '$order_date',
-                        status = '$status',
-                        CustomerName = '$customer_name',
-                        contact = '$customer_contact',
-                        address = '$customer_address'
+                
+                    // Save customer information in the database
+                    $sql_customer = "INSERT INTO customers (Name, Email, Address, Contact) VALUES 
+                        ('$customer_name', '$customer_email', '$customer_address', '$customer_contact')
                     ";
-
-                    //echo $sql2; die();
-
-                    //Execute the Query
-                    $res2 = mysqli_query($conn, $sql2);
-
-                    //Check whether query executed successfully or not
-                    if($res2==true)
-                    {
-                        //Query Executed and Order Saved
-                        $_SESSION['order'] = "<div class='success text-center'>Food Ordered Successfully.</div>";
-                        header('location:'.HOMEURL);
+                    $res_customer = mysqli_query($conn, $sql_customer);
+                
+                    // Check whether the customer information is saved successfully
+                    if ($res_customer) {
+                        // Get the CustomerID of the newly inserted customer
+                        $customer_id = mysqli_insert_id($conn);
+                
+                        // Save the order information in the database
+                        $sql_order = "INSERT INTO orders (FoodID, CustomerID, quantity, total, OrderDate, status) VALUES 
+                            ($food_id, $customer_id, $qty, $total, '$order_date', '$status')
+                        ";
+                        $res_order = mysqli_query($conn, $sql_order);
+                
+                        // Check whether the order information is saved successfully
+                        if ($res_order) {
+                            // Query Executed and Order Saved
+                            $_SESSION['order'] = "<div text-center'>Food Ordered Successfully.</div>";
+                            header('location:' . HOMEURL . 'doannhanh/index.php');
+                        } else {
+                            // Failed to Save Order
+                            $_SESSION['order'] = "<div text-center'>Failed to Order Food.</div>";
+                            header('location:' . HOMEURL . 'doannhanh/index.php');
+                        }
+                    } else {
+                        // Failed to Save Customer
+                        $_SESSION['order'] = "<div text-center'>Failed to Save Customer Information.</div>";
+                        header('location:' . HOMEURL . 'doannhanh/index.php');
                     }
-                    else
-                    {
-                        //Failed to Save Order
-                        $_SESSION['order'] = "<div class='error text-center'>Failed to Order Food.</div>";
-                        header('location:'.HOMEURL);
-                    }
-
                 }
             
             ?>

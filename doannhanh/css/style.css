@@ -234,6 +234,15 @@ footer .social img:hover{
 
 
 
+.success{
+    color: green;
+}
+.error{
+    color: red;
+}
+
+
+
 /* Responsiveness */
 
 @media (min-width: 790px) {

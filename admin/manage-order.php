@@ -45,7 +45,8 @@
                                                 JOIN
                                                 customers ON orders.CustomerID = customers.CustomerID
                                                 JOIN
-                                                menudetail ON orders.FoodID = menudetail.FoodID";
+                                                menudetail ON orders.FoodID = menudetail.FoodID
+                                        ";
 
                                         $res = mysqli_query($conn, $sql);
 

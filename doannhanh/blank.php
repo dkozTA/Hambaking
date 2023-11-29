@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,15 +36,10 @@
     </header>
     
 
-    <section class="landing">
-        <h3><span>Đồ ăn tốt </span>Cho trái tim bạn</h3>
-        <p>Eat what you want to eat!</p>
-        <button class="btn"><a href="services.php">Chọn đồ ăn</button>
-    </section>
-
     
-        
+
     </main>
+    <h3><a href="contact.php">Learn More →</a></h3>
 
 
     <footer>

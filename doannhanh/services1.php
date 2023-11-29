@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
     <!-- Navigation bar -->
     <header class="header">
         <!-- Logo -->
-        <a href="index.php" class="logo">HamBaking.</a>
+        <a href="index.html" class="logo">HamBaking.</a>
 
         <!-- Hamburger icon -->
         <input class="side-menu" type="checkbox" id="side-menu"/>
@@ -25,25 +25,48 @@
         <!-- Menu -->
         <nav class="nav">
             <ul class="menu">
-                <li><a href="index.php">Trang chủ</a></li>
-                <li><a href="services.php">Thực đơn</a> </li>
-                <li><a href="attorneys.php">Sáng Lập</a></li>
-                <li><a href="blog.php">Blog</a></li>
-                <li><a href="about.php">Về HamBaking</a></li>
-                <li><a href="contact.php">Liên hệ</a></li>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html">Thực đơn</a> </li>
+                <li><a href="attorneys.html">Sáng Lập</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">Về HamBaking</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
             </ul>
         </nav>
     </header>
     
 
-    <section class="landing">
-        <h3><span>Đồ ăn tốt </span>Cho trái tim bạn</h3>
-        <p>Eat what you want to eat!</p>
-        <button class="btn"><a href="services.php">Chọn đồ ăn</button>
+    <section class="services">
+
+        <h1 style="font-size: 50px; color: white;">Thực đơn của chúng tôi</h1>
+        
+        <div class="services-container">
+
+            
+
+            <div class="box">
+                <img src="images/ga-lac-pho-mai.jpeg" style="width: 260px; height: 200px;">
+                <h2>Gà lắc phô mai</h2>
+                <p>Gà lắc phô mai, món ngon siêu hấp dẫn với sắc vàng cam bắt mắt cùng lớp phô mai béo ngậy phủ đều các viên gà chiên giòn rụm ăn siêu ngon mà không hề ngán.</p>
+                <h3><a href="">Learn More →</a></h3>
+            </div>
+            <div class="box">
+                <img src="images/maxresdefault.jpg" style="width: 260px; height: 200px;">
+                <h2>Gà viên sốt cam</h2>
+                <p>Vị chua ngọt, dẻo thơm của nước cốt cam kết hợp với miếng thịt gà chiên giòn sẽ là sự lựa chọn tuyệt vời cho những ngày không biết nên đổi món gì.</p>
+                <h3><a href="">Learn More →</a></h3>
+            </div>
+            <div class="box">
+                <img src="images/ga.jpg" style="width: 260px; height: 200px;">
+                <h2>Gà viên sốt mật ong</h2>
+                <p>Đùi gà chiên giòn sốt mật ong óng ánh không chỉ ngon mắt mà còn cực kỳ ngon miệng</p>
+                <h3><a href="">Learn More →</a></h3>
+            
+        </div>
+        
+
     </section>
 
-    
-        
     </main>
 
 
@@ -52,12 +75,12 @@
             <div>
                 <p>HamBaking</p>
                 <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="services.php">Services</a> </li>
-                    <li><a href="attorneys.php">Foundation</a></li>
-                    <li><a href="blog.php">Blog</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a> </li>
+                    <li><a href="attorneys.html">Foundation</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
 

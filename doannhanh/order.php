@@ -7,7 +7,7 @@
             $food_id = $_GET['food_id'];
 
             //Get the DEtails of the SElected Food
-            $sql = "SELECT * FROM tbl_food WHERE id=$food_id";
+            $sql = "SELECT * FROM menudetail WHERE FoodID=$food_id";
             //Execute the Query
             $res = mysqli_query($conn, $sql);
             //Count the rows
@@ -19,8 +19,8 @@
                 //GEt the Data from Database
                 $row = mysqli_fetch_assoc($res);
 
-                $title = $row['title'];
-                $price = $row['price'];
+                $title = $row['Name'];
+                $price = $row['Price'];
                 $image_name = $row['image_name'];
             }
             else
@@ -60,7 +60,7 @@
                             {
                                 //Image is Available
                                 ?>
-                                <img src="<?php echo HOMEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                                <img src="<?php echo HOMEURL; ?>doannhanh/images/food/<?php echo $image_name; ?>", width="130px" class="img-curve">
                                 <?php
                             }
                         

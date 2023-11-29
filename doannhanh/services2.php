@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
     <!-- Navigation bar -->
     <header class="header">
         <!-- Logo -->
-        <a href="index.php" class="logo">HamBaking.</a>
+        <a href="index.html" class="logo">HamBaking.</a>
 
         <!-- Hamburger icon -->
         <input class="side-menu" type="checkbox" id="side-menu"/>
@@ -25,25 +25,49 @@
         <!-- Menu -->
         <nav class="nav">
             <ul class="menu">
-                <li><a href="index.php">Trang chủ</a></li>
-                <li><a href="services.php">Thực đơn</a> </li>
-                <li><a href="attorneys.php">Sáng Lập</a></li>
-                <li><a href="blog.php">Blog</a></li>
-                <li><a href="about.php">Về HamBaking</a></li>
-                <li><a href="contact.php">Liên hệ</a></li>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html">Thực đơn</a> </li>
+                <li><a href="attorneys.html">Sáng Lập</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">Về HamBaking</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
             </ul>
         </nav>
     </header>
     
 
-    <section class="landing">
-        <h3><span>Đồ ăn tốt </span>Cho trái tim bạn</h3>
-        <p>Eat what you want to eat!</p>
-        <button class="btn"><a href="services.php">Chọn đồ ăn</button>
+    <section class="services">
+
+        <h1 style="font-size: 50px; color: white;">Thực đơn của chúng tôi</h1>
+        
+        <div class="services-container">
+
+            
+
+            <div class="box">
+                <img src="images/crdb.jpg" style="width: 260px; height: 200px;">
+                <h2>Cơm rang dưa bò</h2>
+                <p>Hạt cơm vàng ươm, quyện với thịt bò mềm ngọt tự nhiên, dưa cải chua nhẹ làm nên món ăn trứ danh của Hà thành một thời.</p>
+                <h3><a href="">Learn More →</a></h3>
+            </div>
+            <div class="box">
+                <img src="images/Huong-dan-cach-lam-Bibimbap.jpg.webp" style="width: 260px; height: 200px;">
+                <h2>Cơm trộn Hàn Quốc</h2>
+                <p>Cơm trộn Hàn Quốc là món ăn đặc trưng trong nét văn hoá ẩm thực Hàn, hay còn được gọi là Bibimbap.</p>
+                <h3><a href="">Learn More →</a></h3>
+            </div>
+            
+            <div class="box">
+                <img src="images/Com-nam-rong-bien-de-lam-tre-em-nhin-thoi-la-da-me-tit-c1304a8ad9f74edfb5bf28b0a82ae95d-1647486617-43-width500height500.jpeg" style="width: 260px; height: 200px;">
+                <h2>Cơm nắm rong biển thịt bằm</h2>
+                <p>Nếu bạn đã ngán món cơm trắng thường ngày, hãy thử đổi vị với món cơm nắm rong biển thịt bằm nhé.</p>
+                <h3><a href="">Learn More →</a></h3>
+            </div>
+        </div>
+        
+
     </section>
 
-    
-        
     </main>
 
 
@@ -52,12 +76,12 @@
             <div>
                 <p>HamBaking</p>
                 <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="services.php">Services</a> </li>
-                    <li><a href="attorneys.php">Foundation</a></li>
-                    <li><a href="blog.php">Blog</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a> </li>
+                    <li><a href="attorneys.html">Foundation</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
 

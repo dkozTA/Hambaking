@@ -11,14 +11,6 @@ CREATE TABLE Categories (
     image_name VARCHAR(255)
 );
 
--- -- them vao ca hang muc do an
--- INSERT INTO Categories (Name) VALUES
---     ('Burgers'),
---     ('Pizza'),
---     ('Chicken'),
---     ('Sides'),
---     ('Beverages');
-
 
 -- Tao bang Menu cu the
 CREATE TABLE MenuDetail (
@@ -32,15 +24,6 @@ CREATE TABLE MenuDetail (
     active VARCHAR(10),
     FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
 );
-
--- -- them vao menu
--- INSERT INTO MenuDetail (Name, Description, Price, CategoryID) VALUES
---     ('Classic Cheeseburger', 'Delicious cheeseburger with all the fixings.', 5.99, 1),
---     ('Pepperoni Pizza', 'Tasty pepperoni pizza with a crispy crust.', 8.99, 2),
---     ('Fried Chicken Bucket', 'Crispy fried chicken, 8 pieces.', 12.99, 3),
---     ('French Fries', 'Golden and crispy french fries.', 4.99, 4),
---     ('Soda', 'Refreshing soda in various flavors.', 1.99, 5);
-
 
 -- tao bang admin
 CREATE TABLE admin (

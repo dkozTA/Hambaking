@@ -48,20 +48,20 @@
                 <img src="images/crdb.jpg" style="width: 260px; height: 200px;">
                 <h2>Cơm rang dưa bò</h2>
                 <p>Hạt cơm vàng ươm, quyện với thịt bò mềm ngọt tự nhiên, dưa cải chua nhẹ làm nên món ăn trứ danh của Hà thành một thời.</p>
-                <h3><a href="">Learn More →</a></h3>
+                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
             </div>
             <div class="box">
                 <img src="images/Huong-dan-cach-lam-Bibimbap.jpg.webp" style="width: 260px; height: 200px;">
                 <h2>Cơm trộn Hàn Quốc</h2>
                 <p>Cơm trộn Hàn Quốc là món ăn đặc trưng trong nét văn hoá ẩm thực Hàn, hay còn được gọi là Bibimbap.</p>
-                <h3><a href="">Learn More →</a></h3>
+                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
             </div>
             
             <div class="box">
                 <img src="images/Com-nam-rong-bien-de-lam-tre-em-nhin-thoi-la-da-me-tit-c1304a8ad9f74edfb5bf28b0a82ae95d-1647486617-43-width500height500.jpeg" style="width: 260px; height: 200px;">
                 <h2>Cơm nắm rong biển thịt bằm</h2>
                 <p>Nếu bạn đã ngán món cơm trắng thường ngày, hãy thử đổi vị với món cơm nắm rong biển thịt bằm nhé.</p>
-                <h3><a href="">Learn More →</a></h3>
+                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
             </div>
         </div>
         

@@ -1,66 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Shopping-cart</title>
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/reponsive.css" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/contact.css">
+
+    
 </head>
-
 <body>
-    <!-- header -->
-    <header>
-        <nav>
-            <div class="img-nav">
-                <img src="img/logo.png" alt="" />
-            </div>
-            <div class="content-nav">
+    
+    <main>
+    <!-- Navigation bar -->
+    <header class="header">
+        <!-- Logo -->
+        <a href="index.php" class="logo">HamBaking.</a>
+
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamburger" for="side-menu"><span class="hamburger-line"></span></label>
+
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.php">Trang chủ</a></li>
+                <li><a href="services.php">Thực đơn</a> </li>
+                <li><a href="attorneys.php">Sáng Lập</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="about.php">Về HamBaking</a></li>
+                <li><a href="contact.php">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="contact-page">
+
+        <div class="contact-container">
+            <h1>Thông tin mua hàng</h1>
+            <form id="contact-form" action="#" method="post">
+            <input type="text" id="name" name="name" placeholder="Tên người nhận" required>
+            <input type="email" id="email" name="email" placeholder="E-mail" required>
+            <input type="phone" id="phone" name="phone" placeholder="Số điện thoại" required>
+            <input type="phone" id="phone" name="phone" placeholder="Tin nhắn" required>
+            <button class="btn" type="submit" id="submit" name="submit">GỬI</button>
+      </form>
+        </div>
+
+    </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <div>
+                <p>HamBaking</p>
                 <ul>
-                    <li><a href="#">Trang Chủ</a></li>
-                    <li><a href="#">Sản Phẩm</a></li>
-                    <li><a href="#">Liên Hệ</a></li>
-                    <li><a href="#">Giới Thiệu</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="services.php">Services</a> </li>
+                    <li><a href="attorneys.php">Foundation</a></li>
+                    <li><a href="blog.php">Blog</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
                 </ul>
-                <form>
-                    <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." />
-                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                </form>
             </div>
-            <!-- The Modal -->
-            <button id="cart">
-                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                Giỏ Hàng
-            </button>
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Giỏ Hàng</h5>
-                        <span class="close">&times;</span>
-                    </div>
-                    <div class="modal-body">
-                        <div class="cart-row">
-                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
-                            <span class="cart-price cart-header cart-column">Giá</span>
-                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
-                        </div>
-                        <div class="cart-items">
 
-                        </div>
-                        <div class="cart-total">
-                            <strong class="cart-total-title">Tổng Cộng:</strong>
-                            <span class="cart-total-price">0VNĐ</span>
-                        </div>
-                    </div>
+            <div>
+                <p>1900-1533</p>
+                <p>Giao hàng tận nơi</p>
+                <ul>
+                    <li><a href="#">Chính sách và quy định chung</a></li>
+                    <li><a href="#">Chính sách thanh toán khi đặt hàng</a></li>
+                    <li><a href="#">Chính sách hoạt động</a></li>
+                    <li><a href="#">Chính sách bảo mật thông tin</a></li>
+                    <li><a href="#">Hướng dẫn đặt phần ăn</a></li>
+                </ul>
+            </div>
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
-                        <button type="button" class="btn btn-primary order">Thanh Toán</button>
-                    </div>
+            <div>
+                <p>Liên hệ</p>
+                <span>39 Hồ Tùng Mậu, Mai Dịch, Cầu Giấy, Hà Nội</span>
+                <ul>
+                    <li><a href="#">+84 366-609-380</a></li>
+                    <li><a href="#">+84 737-820-79</a></li>
+                    <li><a href="#">nguyenvietson31102004@gmail.com</a></li>
+                </ul>
+
+                <div class="social">
+                    <p>Kết nối</p>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt=""></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt=""></a>
+                    <a href="https://www.twitter.com/" target="_blank"><img src="images/twitter.png" alt=""></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt=""></a>
                 </div>
             </div>
-        </nav>
+        </div>
+        
+        <p style="text-align: center; font-size: 17px; color:white; ">Copyright &copy; 2023 HamBaking Vietnam </p>
+    </footer>

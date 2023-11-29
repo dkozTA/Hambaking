@@ -48,19 +48,19 @@
                 <img src="images/ga-lac-pho-mai.jpeg" style="width: 260px; height: 200px;">
                 <h2>Gà lắc phô mai</h2>
                 <p>Gà lắc phô mai, món ngon siêu hấp dẫn với sắc vàng cam bắt mắt cùng lớp phô mai béo ngậy phủ đều các viên gà chiên giòn rụm ăn siêu ngon mà không hề ngán.</p>
-                <h3><a href="">Learn More →</a></h3>
+                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
             </div>
             <div class="box">
                 <img src="images/maxresdefault.jpg" style="width: 260px; height: 200px;">
                 <h2>Gà viên sốt cam</h2>
                 <p>Vị chua ngọt, dẻo thơm của nước cốt cam kết hợp với miếng thịt gà chiên giòn sẽ là sự lựa chọn tuyệt vời cho những ngày không biết nên đổi món gì.</p>
-                <h3><a href="">Learn More →</a></h3>
+                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
             </div>
             <div class="box">
                 <img src="images/ga.jpg" style="width: 260px; height: 200px;">
                 <h2>Gà viên sốt mật ong</h2>
                 <p>Đùi gà chiên giòn sốt mật ong óng ánh không chỉ ngon mắt mà còn cực kỳ ngon miệng</p>
-                <h3><a href="">Learn More →</a></h3>
+                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
             
         </div>
         

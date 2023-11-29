@@ -13,10 +13,10 @@
 }
 
 .services .box{
-    background-color: white;
+    background-color: thistle;
     border-radius: 10px;
     text-align: left;
-    width: 300px;
+    width: 1000px;
     padding: 30px 20px;
     margin-bottom: 30px;
 }
@@ -24,12 +24,12 @@
 
 
 .services p{
-    color: gray;
+    color: black;
     margin-bottom: 20px;
 }
 
 .services .box h2{
-    color: #e4c7a4;
+    color: black;
     margin-bottom: 20px;
 }
 

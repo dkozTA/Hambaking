@@ -16,7 +16,7 @@
     <!-- Navigation bar -->
     <header class="header">
         <!-- Logo -->
-        <a href="index.html" class="logo">HamBaking.</a>
+        <a href="index.php" class="logo">HamBaking.</a>
 
         <!-- Hamburger icon -->
         <input class="side-menu" type="checkbox" id="side-menu"/>
@@ -25,12 +25,12 @@
         <!-- Menu -->
         <nav class="nav">
             <ul class="menu">
-                <li><a href="index.html">Trang chủ</a></li>
-                <li><a href="services.html">Thực đơn</a> </li>
-                <li><a href="attorneys.html">Sáng Lập</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">Về HamBaking</a></li>
-                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="index.php">Trang chủ</a></li>
+                <li><a href="services.php">Thực đơn</a> </li>
+                <li><a href="attorneys.php">Sáng Lập</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="about.php">Về HamBaking</a></li>
+                <li><a href="contact.php">Liên hệ</a></li>
             </ul>
         </nav>
     </header>
@@ -76,12 +76,12 @@
             <div>
                 <p>HamBaking</p>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a> </li>
-                    <li><a href="attorneys.html">Foundation</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="services.php">Services</a> </li>
+                    <li><a href="attorneys.php">Foundation</a></li>
+                    <li><a href="blog.php">Blog</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
                 </ul>
             </div>
 

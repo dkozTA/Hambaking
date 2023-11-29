@@ -16,7 +16,7 @@
     <!-- Navigation bar -->
     <header class="header">
         <!-- Logo -->
-        <a href="index.php" class="logo">HamBaking.</a>
+        <a href="index.php" class="logo">HamBaking</a>
 
         <!-- Hamburger icon -->
         <input class="side-menu" type="checkbox" id="side-menu"/>

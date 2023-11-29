@@ -12,7 +12,7 @@
 </head>
 <body>
     
-    <main>
+<main>
     <!-- Navigation bar -->
     <header class="header">
         <!-- Logo -->
@@ -41,28 +41,70 @@
         <h1 style="font-size: 50px; color: white;">Thực đơn của chúng tôi</h1>
         
         <div class="services-container">
+        <?php 
+                //Display Foods that are Active
+                $sql = "SELECT * FROM menudetail WHERE active='Yes' AND CategoryID=34";
 
-            
+                //Execute the Query
+                $res=mysqli_query($conn, $sql);
 
-            <div class="box">
-                <img src="images/crdb.jpg" style="width: 260px; height: 200px;">
-                <h2>Cơm rang dưa bò</h2>
-                <p>Hạt cơm vàng ươm, quyện với thịt bò mềm ngọt tự nhiên, dưa cải chua nhẹ làm nên món ăn trứ danh của Hà thành một thời.</p>
-                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
-            </div>
-            <div class="box">
-                <img src="images/Huong-dan-cach-lam-Bibimbap.jpg.webp" style="width: 260px; height: 200px;">
-                <h2>Cơm trộn Hàn Quốc</h2>
-                <p>Cơm trộn Hàn Quốc là món ăn đặc trưng trong nét văn hoá ẩm thực Hàn, hay còn được gọi là Bibimbap.</p>
-                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
-            </div>
+                //Count Rows
+                $count = mysqli_num_rows($res);
+
+                //CHeck whether the foods are availalable or not
+                if($count>0)
+                {
+                    //Foods Available
+                    while($row=mysqli_fetch_assoc($res))
+                    {
+                        //Get the Values
+                        $id = $row['FoodID'];
+                        $title = $row['Name'];
+                        $description = $row['Description'];
+                        $price = $row['Price'];
+                        $image_name = $row['image_name'];
+                        ?>
+                        
+                        <div class="box">
+                                <?php 
+                                    //CHeck whether image available or not
+                                    if($image_name=="")
+                                    {
+                                        //Image not Available
+                                        echo "<div class='error'>Image not Available.</div>";
+                                    }
+                                    else
+                                    {
+                                        //Image Available
+                                        ?>
+                                        <img src="<?php echo HOMEURL; ?>doannhanh/images/food/<?php echo $image_name; ?>" style="width: 260px; height: 200px;">
+                                        <?php
+                                    }
+                                ?>
+
+                            <div class="food-menu-desc">
+                                <h2><?php echo $title; ?></h2>
+                                <p class="food-price"><?php echo $price; ?>VND</p>
+                                <p class="food-detail">
+                                    <?php echo $description; ?>
+                                </p>
+                                <br>
+
+                                <h3><a href="dathang.php?food_id=<?php echo $id; ?>">Đặt hàng ngay →</a></h3>
+                            </div>
+                        </div>
+
+                        <?php
+                    }
+                }
+                else
+                {
+                    //Food not Available
+                    echo "<div class='error'>Food not found.</div>";
+                }
+            ?>
             
-            <div class="box">
-                <img src="images/Com-nam-rong-bien-de-lam-tre-em-nhin-thoi-la-da-me-tit-c1304a8ad9f74edfb5bf28b0a82ae95d-1647486617-43-width500height500.jpeg" style="width: 260px; height: 200px;">
-                <h2>Cơm nắm rong biển thịt bằm</h2>
-                <p>Nếu bạn đã ngán món cơm trắng thường ngày, hãy thử đổi vị với món cơm nắm rong biển thịt bằm nhé.</p>
-                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
-            </div>
+            
         </div>
         
 

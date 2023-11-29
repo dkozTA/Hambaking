@@ -1,3 +1,5 @@
+<?php include('/xampp/htdocs/Hambaking/config/constants.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,26 +43,69 @@
         <h1 style="font-size: 50px; color: white;">Thực đơn của chúng tôi</h1>
         
         <div class="services-container">
+        <?php 
+                //Display Foods that are Active
+                $sql = "SELECT * FROM menudetail WHERE active='Yes' AND CategoryID=33";
 
+                //Execute the Query
+                $res=mysqli_query($conn, $sql);
+
+                //Count Rows
+                $count = mysqli_num_rows($res);
+
+                //CHeck whether the foods are availalable or not
+                if($count>0)
+                {
+                    //Foods Available
+                    while($row=mysqli_fetch_assoc($res))
+                    {
+                        //Get the Values
+                        $id = $row['FoodID'];
+                        $title = $row['Name'];
+                        $description = $row['Description'];
+                        $price = $row['Price'];
+                        $image_name = $row['image_name'];
+                        ?>
+                        
+                        <div class="box">
+                                <?php 
+                                    //CHeck whether image available or not
+                                    if($image_name=="")
+                                    {
+                                        //Image not Available
+                                        echo "<div class='error'>Image not Available.</div>";
+                                    }
+                                    else
+                                    {
+                                        //Image Available
+                                        ?>
+                                        <img src="<?php echo HOMEURL; ?>doannhanh/images/food/<?php echo $image_name; ?>" style="width: 260px; height: 200px;">
+                                        <?php
+                                    }
+                                ?>
+
+                            <div class="food-menu-desc">
+                                <h2><?php echo $title; ?></h2>
+                                <p class="food-price"><?php echo $price; ?>VND</p>
+                                <p class="food-detail">
+                                    <?php echo $description; ?>
+                                </p>
+                                <br>
+
+                                <h3><a href="dathang.php?food_id=<?php echo $id; ?>">Đặt hàng ngay →</a></h3>
+                            </div>
+                        </div>
+
+                        <?php
+                    }
+                }
+                else
+                {
+                    //Food not Available
+                    echo "<div class='error'>Food not found.</div>";
+                }
+            ?>
             
-
-            <div class="box">
-                <img src="images/ga-lac-pho-mai.jpeg" style="width: 260px; height: 200px;">
-                <h2>Gà lắc phô mai</h2>
-                <p>Gà lắc phô mai, món ngon siêu hấp dẫn với sắc vàng cam bắt mắt cùng lớp phô mai béo ngậy phủ đều các viên gà chiên giòn rụm ăn siêu ngon mà không hề ngán.</p>
-                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
-            </div>
-            <div class="box">
-                <img src="images/maxresdefault.jpg" style="width: 260px; height: 200px;">
-                <h2>Gà viên sốt cam</h2>
-                <p>Vị chua ngọt, dẻo thơm của nước cốt cam kết hợp với miếng thịt gà chiên giòn sẽ là sự lựa chọn tuyệt vời cho những ngày không biết nên đổi món gì.</p>
-                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
-            </div>
-            <div class="box">
-                <img src="images/ga.jpg" style="width: 260px; height: 200px;">
-                <h2>Gà viên sốt mật ong</h2>
-                <p>Đùi gà chiên giòn sốt mật ong óng ánh không chỉ ngon mắt mà còn cực kỳ ngon miệng</p>
-                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
             
         </div>
         

@@ -76,7 +76,7 @@
                                                         <td><?php echo $customer_name; ?></td>
                                                         <td><?php echo $food; ?></td>
                                                         <td><?php echo $quantity; ?></td>
-                                                        <td><?php echo $total; ?></td>
+                                                        <td><?php echo $total."VNĐ"; ?></td>
                                                         <td><?php echo $order_date; ?></td>
                                                         <td><?php echo $status; ?></td>
                                                         <td><?php echo $contact; ?></td>

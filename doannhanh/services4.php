@@ -1,3 +1,4 @@
+<?php include('/xampp/htdocs/Hambaking/config/constants.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,24 +44,68 @@
         <div class="services-container">
 
             
+        <?php 
+                //Display Foods that are Active
+                $sql = "SELECT * FROM menudetail WHERE active='Yes' AND CategoryID=36";
 
-            <div class="box">
-                <img src="images/douong1.jpg" style="width: 260px; height: 200px;">
-                <h2>Trà đào</h2>
-                <p>Thức uống giải khát ó vị chua chua, ngọt ngọt, thơm mát, rất được ưa chuộng trong những ngày hè nóng bức.</p>
-                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
-            </div>
-            <div class="box">
-                <img src="images/douong2.jpg" style="width: 260px; height: 200px;">
-                <h2>Trà sữa đường đen</h2>
-                <p>Được làm từ trà đen và đường đen, thức uống này có vị ngọt thanh, béo ngậy, thơm mùi trà đen và đường đen, rất được ưa chuộng bởi mọi lứa tuổi</p>
-                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
-            </div>
-            <div class="box">
-                <img src="images/douong3.jpg" style="width: 260px; height: 200px;">
-                <h2>Chanh tuyết</h2>
-                <p>Một ly chanh tuyết mát lạnh, thơm lừng vị chanh tươi, hòa quyện với vị ngọt dịu của sữa, tan ngay trong miệng.</p>
-                <h3><a href="dathang.php">Đặt hàng ngay →</a></h3>
+                //Execute the Query
+                $res=mysqli_query($conn, $sql);
+
+                //Count Rows
+                $count = mysqli_num_rows($res);
+
+                //CHeck whether the foods are availalable or not
+                if($count>0)
+                {
+                    //Foods Available
+                    while($row=mysqli_fetch_assoc($res))
+                    {
+                        //Get the Values
+                        $id = $row['FoodID'];
+                        $title = $row['Name'];
+                        $description = $row['Description'];
+                        $price = $row['Price'];
+                        $image_name = $row['image_name'];
+                        ?>
+                        
+                        <div class="box">
+                                <?php 
+                                    //CHeck whether image available or not
+                                    if($image_name=="")
+                                    {
+                                        //Image not Available
+                                        echo "<div class='error'>Image not Available.</div>";
+                                    }
+                                    else
+                                    {
+                                        //Image Available
+                                        ?>
+                                        <img src="<?php echo HOMEURL; ?>doannhanh/images/food/<?php echo $image_name; ?>" style="width: 260px; height: 200px;">
+                                        <?php
+                                    }
+                                ?>
+
+                            <div class="food-menu-desc">
+                                <h2><?php echo $title; ?></h2>
+                                <p class="food-price"><?php echo $price; ?>VND</p>
+                                <p class="food-detail">
+                                    <?php echo $description; ?>
+                                </p>
+                                <br>
+
+                                <h3><a href="dathang.php?food_id=<?php echo $id; ?>">Đặt hàng ngay →</a></h3>
+                            </div>
+                        </div>
+
+                        <?php
+                    }
+                }
+                else
+                {
+                    //Food not Available
+                    echo "<div class='error'>Food not found.</div>";
+                }
+            ?>
             
         </div>
         

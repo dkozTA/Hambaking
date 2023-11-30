@@ -8,6 +8,13 @@
 
                         <br /><br /><br />
 
+                        <?php
+                                if(isset($_SESSION['delete'])) {
+                                        echo $_SESSION['delete'];
+                                        unset($_SESSION['delete']);
+                                }
+                        ?>
+
 
 
                         <table class="tbl-full">
@@ -83,7 +90,7 @@
                                                         <!-- <td><?php echo $email; ?></td> -->
                                                         <td><?php echo $address; ?></td>
                                                         <td>
-                                                                <a href="#" class="btn-secondary">Update</a>
+                                                                <a href="<?php echo HOMEURL; ?>admin/delete-order.php?id=<?php echo $order_id; ?>" class="btn-secondary">Delete</a>
                                                         </td>
                                                 </tr>
 

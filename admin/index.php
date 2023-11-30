@@ -21,27 +21,52 @@
 
 
                 <div class="col-4 text-center">
-                    <h1>5</h1>
+                    <?php
+                        $sql_catagory = "SELECT * FROM categories";
+                        $res_catagory = mysqli_query($conn, $sql_catagory);
+                        $count_catagory = mysqli_num_rows($res_catagory);
+                    ?>
+
+                    <h1><?php echo $count_catagory; ?></h1>
                     <br>
-                    Category
+                    Số loại đồ ăn
                 </div>
 
                 <div class="col-4 text-center">
-                    <h1>5</h1>
+                    <?php
+                        $sql_food = "SELECT * FROM menudetail";
+                        $res_food = mysqli_query($conn, $sql_food);
+                        $count_food = mysqli_num_rows($res_food);
+                    ?>
+
+                    <h1><?php echo $count_food; ?></h1>
                     <br>
-                    Category
+                    Số món ăn
                 </div>
 
                 <div class="col-4 text-center">
-                    <h1>5</h1>
+                    <?php
+                        $sql_order = "SELECT * FROM orders";
+                        $res_order = mysqli_query($conn, $sql_order);
+                        $count_order = mysqli_num_rows($res_order);
+                    ?>
+
+                    <h1><?php echo $count_order; ?></h1>
                     <br>
-                    Category
+                    Tổng đơn hàng
                 </div>
 
                 <div class="col-4 text-center">
-                    <h1>5</h1>
+                    <?php
+                        $sql_total = "SELECT SUM(total) as Total FROM orders";
+                        $res_total = mysqli_query($conn, $sql_total);
+                        $row_total = mysqli_fetch_assoc($res_total);
+                        $total = $row_total['Total'];
+                    ?>
+
+                    <h1><?php echo $total; ?></h1>
                     <br>
-                    Category
+                    Tiền đã kiếm(VNĐ)
                 </div>
 
                 <div class="clearfix"></div>

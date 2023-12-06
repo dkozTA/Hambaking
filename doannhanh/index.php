@@ -36,14 +36,9 @@
     </header>
 
         <?php 
-            if(isset($_SESSION['error'])) {
-                echo $_SESSION['error'];
-                unset($_SESSION['error']);
-            }
-
-            if(isset($_SESSION['success'])) {
-                echo $_SESSION['success'];
-                unset($_SESSION['success']);
+            if(isset($_SESSION['order'])) {
+                echo $_SESSION['order'];
+                unset($_SESSION['order']);
             }
         ?>
     

@@ -61,7 +61,7 @@
                     Người phụ nữ ăn hết chiếc bánh mì kẹp thịt một cách ngon lành. Bà ấy nói: "Cháu biết không, cháu đã cho bà một món quà vô giá. Món quà đó là tình yêu thương và sự sẻ chia. Cháu đã khiến bà cảm thấy hạnh phúc hơn".
                     
                     Hùng nghe vậy thì rất vui. Cậu bé biết rằng mình đã làm một việc tốt. Cậu bé hứa với bản thân sẽ ăn đồ ăn nhanh một cách điều độ hơn và sẽ thường xuyên giúp đỡ những người có hoàn cảnh khó khăn.</p>
-                <button class="btn">Read More</button>
+
             </div>
             
         </div>
@@ -86,7 +86,7 @@
                     Người phụ nữ ăn hết chiếc bánh mì kẹp thịt một cách ngon lành. Bà ấy nói: "Cháu biết không, cháu đã cho bà một món quà vô giá. Món quà đó là tình yêu thương và sự sẻ chia. Cháu đã khiến bà cảm thấy hạnh phúc hơn".
                     
                     Hùng nghe vậy thì rất vui. Cậu bé biết rằng mình đã làm một việc tốt. Cậu bé hứa với bản thân sẽ ăn đồ ăn nhanh một cách điều độ hơn và sẽ thường xuyên giúp đỡ những người có hoàn cảnh khó khăn.</p>
-                <button class="btn">Read More</button>
+
             </div>
             
         </div><div class="blog-container"> 
@@ -116,7 +116,7 @@ Câu chuyện về món gà rán là một câu chuyện hay về tình bạn v�
 
 
 </p>
-                <button class="btn">Read More</button>
+
             </div>
             
         </div>

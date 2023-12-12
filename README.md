@@ -15,11 +15,11 @@ Rồi mở folder trên VSCode rồi ấn Serve project
 
 
 
-Hoặc sau khi chạy tất cả server trên xampp thì ghi: localhost/Hambaking rồi chọn file doannhanh để vào trang chính, admin để vào trang admin.
+Hoặc sau khi chạy tất cả server trên xampp thì ghi: localhost/Hambaking trên web rồi chọn file doannhanh để vào trang chính, admin để vào trang admin.
 
 
 ## DATABASE
-****![image](https://github.com/dkozTA/Hambaking/assets/124289620/d6c891bf-e34e-4734-b84e-12d75f2590d5)
+![image](https://github.com/dkozTA/Hambaking/assets/124289620/d6c891bf-e34e-4734-b84e-12d75f2590d5)
 
 
 

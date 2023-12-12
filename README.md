@@ -1,5 +1,5 @@
 # Hambaking
-DỰ ÁN WEBSITE ĐỒ ĂN CỦA 
+DỰ ÁN WEBSITE ĐỒ ĂN CHO MÔN CSDL KỲ 1 NĂM 2023 (UET/VNU) CỦA 
  - Quàng Thế Anh_22026554
  - Nguyễn Việt Sơn_22026518
  - Nguyễn Hữu Thái_22026509
@@ -20,3 +20,9 @@ Hoặc sau khi chạy tất cả server trên xampp thì ghi: localhost/Hambakin
 
 ## DATABASE
 ****![image](https://github.com/dkozTA/Hambaking/assets/124289620/d6c891bf-e34e-4734-b84e-12d75f2590d5)
+
+
+
+## Nguồn tham khảo
+ - [chính](https://www.youtube.com/playlist?list=PLBLPjjQlnVXXBheMQrkv3UROskC0K1ctW)
+ - còn lại nhóm em tự mò.

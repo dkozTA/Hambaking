@@ -4,6 +4,9 @@ DỰ ÁN WEBSITE ĐỒ ĂN CHO MÔN CSDL KỲ 1 NĂM 2023 (UET/VNU) CỦA
  - Nguyễn Việt Sơn_22026518
  - Nguyễn Hữu Thái_22026509
 
+
+## [DEMO](https://youtu.be/SDJ05irAXIY?feature=shared)
+
 ## Cài đặt
 Nếu đã có php và xampp trên máy thì clone folder này vào trong folder của xampp/htdocs
 ![image](https://github.com/dkozTA/Hambaking/assets/124289620/b3b984a7-38f7-444a-8e51-fe912b121d85)
